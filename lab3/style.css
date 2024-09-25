@@ -1,0 +1,152 @@
+/* Основні стилі для сторінки */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6f0f2; /* Схожий на світло-блакитний фон */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* Контейнер резюме */
+.resume-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    margin-top: 70px; /* Для відступу від меню */
+    text-align: left;
+    line-height: 1.6;
+}
+
+/* Стилі для фото профілю */
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 20px;
+}
+
+/* Стилі для інформації про користувача */
+.info h1 {
+    margin: 0;
+    font-size: 32px;
+    color: #333;
+}
+
+.info p {
+    margin: 10px 0;
+}
+
+.info a {
+    color: #3498db; /* Колір посилань */
+    text-decoration: none;
+}
+
+/* Заголовки розділів */
+.section h2 {
+    color: #2c3e50;
+    font-size: 24px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+}
+
+/* Таблиця для досвіду роботи */
+table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f8f8f8;
+}
+
+/* Навички */
+.section p {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+/* Верхнє меню */
+#top-menu {
+    top: 0;
+    position: fixed;
+    color: #fff;
+    background-color: #4caf50;
+    left: 0;
+    right: 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    z-index: 1000;
+}
+
+#top-menu a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.top-menu-btn {
+    position: relative;
+    color: #fff;
+    padding: 10px;
+    width: 170px;
+    display: inline-block;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color 200ms ease-in-out;
+}
+
+.top-menu-btn:hover {
+    background-color: #333;
+}
+
+/* Підменю */
+.top-submenu {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease-in-out;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+    z-index: 10;
+}
+
+.top-menu-btn:hover .top-submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.top-submenu-btn {
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    display: block;
+    white-space: nowrap;
+    transition: background-color 200ms ease-in-out;
+}
+
+.top-submenu-btn:hover {
+    background-color: rgba(255, 33, 33, 0.6);
+    color: #fff;
+}
