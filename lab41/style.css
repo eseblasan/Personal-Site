@@ -1,0 +1,103 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+.header {
+    background-image: url('beautiful-shot-top-mountain.jpg'); /* Замініть на ваше зображення */
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.header p {
+    font-size: 20px;
+}
+
+.header button {
+    padding: 10px 20px;
+    background-color: teal;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Main Content */
+.main-content {
+    padding: 50px;
+    text-align: center;
+}
+
+.main-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.main-content p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Section */
+.section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.section .card {
+    width: 30%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.section .card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.section .card h3 {
+    font-size: 24px;
+    margin: 15px 0;
+}
+
+.section .card p {
+    font-size: 16px;
+    color: #777;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 900px) {
+    .section {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .section .card {
+        width: 100%;
+    }
+}
