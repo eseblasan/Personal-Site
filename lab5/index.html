@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Illia - Bootstrap</title>
+    <!-- CSS Bootstrap через CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="top-menu">
+        <div class="top-menu-btn">
+            Лабораторні
+            <div class="top-submenu">
+                <a href="https://eseblasan.github.io/Personal-Site/lab1/index.html">
+                    <div class="top-submenu-btn">Лабораторна #1</div>
+                </a>
+                <a href="https://eseblasan.github.io/Personal-Site/">
+                    <div class="top-submenu-btn">Лабораторна #2</div>
+                </a>
+                <a href="https://eseblasan.github.io/Personal-Site/lab3/index.html">
+                    <div class="top-submenu-btn">Лабораторна #3</div>
+                </a>
+                <a href="https://eseblasan.github.io/Personal-Site/lab4/index.html">
+                    <div class="top-submenu-btn">Лабораторна #4</div>
+                </a>
+                <a href="https://eseblasan.github.io/Personal-Site/lab41/index.html">
+                    <div class="top-submenu-btn">Лабораторна #4.1</div>
+                </a>
+                <a href="">
+                    <div class="top-submenu-btn">Лабораторна #5</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <header class="custom-header">
+            <h1>Ласкаво просимо до проекту Your Name!</h1>
+        </header>
+
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Головна</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="about-tab" data-toggle="tab" href="#about" role="tab" aria-controls="about" aria-selected="false">Про мене</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Контакти</a>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <h2>Головна</h2>
+                <p>Це основна сторінка вашого проекту. Тут ви можете додати загальну інформацію про ваш проект.</p>
+                <a href="#about" class="btn btn-primary" data-toggle="tab">Дізнатися більше про мене</a>
+                <a href="#contact" class="btn btn-secondary" data-toggle="tab">Зв'язатися зі мною</a>
+            </div>
+            <div class="tab-pane fade" id="about" role="tabpanel" aria-labelledby="about-tab">
+                <h2>Про мене</h2>
+                <p>Тут ви можете додати інформацію про себе, свої досягнення та інтереси.</p>
+                <a href="#home" class="btn btn-secondary" data-toggle="tab">На головну</a>
+            </div>
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                <h2>Контакти</h2>
+                <p>Тут ви можете вказати свої контактні дані, такі як електронна пошта або номер телефону.</p>
+                <a href="#home" class="btn btn-secondary" data-toggle="tab">На головну</a>
+            </div>
+        </div>
+
+        <footer class="footer text-center">
+            <p>© 2024 Illia. Всі права захищені.</p>
+        </footer>
+    </div>
+
+    <!-- JS Bootstrap через CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -6,7 +6,7 @@ body, html {
 
 
 .header {
-    background-image: url('beautiful-shot-top-mountain.jpg'); /* Замініть на ваше зображення */
+    background-image: url('beautiful-shot-top-mountain.jpg'); 
     height: 60vh;
     background-size: cover;
     background-position: center;
@@ -51,8 +51,6 @@ body, html {
     color: #555;
     margin-bottom: 40px;
 }
-
-/* Section */
 .section {
     display: flex;
     justify-content: center;
@@ -82,7 +80,6 @@ body, html {
     color: #777;
 }
 
-/* Footer */
 .footer {
     background-color: #333;
     color: white;
@@ -90,7 +87,7 @@ body, html {
     padding: 20px;
 }
 
-/* Media Queries */
+
 @media (max-width: 900px) {
     .section {
         flex-direction: column;

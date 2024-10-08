@@ -1,12 +1,29 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: Arial, sans-serif;
     padding: 20px;
+    background-color: #f8f9fa; /* Світлий фон */
+}
+.custom-header {
+    background-color: #343a40; /* Темний фон для заголовка */
+    color: white; /* Білий текст */
+    padding: 20px;
+    text-align: center; /* Центрування тексту */
+}
+.footer {
+    background-color: #343a40; /* Темний фон для футера */
+    color: white; /* Білий текст */
+    position: fixed; /* Фіксоване положення */
+    width: 100%; /* Ширина 100% */
+    bottom: 0; /* Внизу сторінки */
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px; 
+    left: 0;
+}
+@media (max-width: 768px) {
+    /* Медіа-запит для зміни стилів на менших екранах */
+    .custom-header {
+        font-size: 1.5rem; /* Зменшений розмір шрифту на малих екранах */
+    }
 }
 #top-menu{
 	top: 0;
@@ -70,77 +87,4 @@ body {
 .top-submenu-btn:hover{
 	background-color:rgba(255, 33, 33, 0.6);
 	color: #fff;
-}
-.container {
-    position: relative;
-    width: auto;
-    height: 1000px;
-    padding: 20px;
-    border: 1px solid #2029a5;
-    background-color: #e0f0ff;
-}
-
-img.photo {
- margin: 0;
- left: 0;
-    top: 0;
-    height: 480px;
-    width: 360px;
-}
-
-.content {
-    position: absolute;
-    background-color: #f26d6d;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    width: 250px; 
-    word-wrap: break-word; 
-}
-
-.content1 {
-    top: 10px;
-    right: 10px;
-}
-
-.content2 {
-    top: 150px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.content3 {
-    bottom: 20px;
-    left: 10px;
-}
-
-.content4 {
-    bottom: 20px;
-    right: 10px;
-}
-
-#experience, #skills {
-    margin-top: 20px;
-}
-
-h2 {
-    margin-bottom: 10px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-table, th, td {
-    border: 1px solid black;
-}
-
-th, td {
-    padding: 10px;
-    text-align: center;
-}
-
-#skills table td:nth-child(2), #skills table td:nth-child(4) {
-    font-size: 18px;
 }
