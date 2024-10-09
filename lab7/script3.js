@@ -5,8 +5,8 @@ $(document).ready(function() {
     let started = false;
     let level = 0;
 
-    // Старт гри при натисканні будь-якої клавіші
-    $(document).keypress(function() {
+    // Обработчик события для начала игры при нажатии любой клавиши
+    $(document).on("keydown", function() {
         if (!started) {
             $("#level-title").text("Рівень " + level);
             nextSequence();
@@ -14,41 +14,43 @@ $(document).ready(function() {
         }
     });
 
-    // Обробка натискання кнопок гравцем
+    // Обработчик кликов по цветным кнопкам
     $(".btn").click(function() {
-        let userChosenColor = $(this).attr("id");
-        userClickedPattern.push(userChosenColor);
-        playSound(userChosenColor);
-        animatePress(userChosenColor);
+        if (started) { // Добавлена проверка, чтобы кнопки срабатывали только после начала игры
+            let userChosenColor = $(this).attr("id");
+            userClickedPattern.push(userChosenColor);
+            playSound(userChosenColor);
+            animatePress(userChosenColor);
 
-        // Перевірка відповіді користувача
-        checkAnswer(userClickedPattern.length - 1);
+            // Проверка правильности ответа пользователя
+            checkAnswer(userClickedPattern.length - 1);
+        }
     });
 
-    // Перевірка відповіді користувача
+    // Проверка ответа пользователя
     function checkAnswer(currentLevel) {
         if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
-            // Якщо гравець повторив послідовність
             if (userClickedPattern.length === gamePattern.length) {
                 setTimeout(function() {
                     nextSequence();
                 }, 1000);
             }
         } else {
-            // Якщо помилка
+            // Если пользователь ошибается
             playSound("wrong");
             $("body").addClass("game-over");
-            $("#level-title").text("Гра закінчена, натисніть будь-яку клавішу, щоб почати знову");
+            $("#level-title").text("Гра закінчена. Натисніть будь-яку клавішу, щоб почати знову.");
 
             setTimeout(function() {
                 $("body").removeClass("game-over");
             }, 200);
 
+            // Перезапуск игры
             startOver();
         }
     }
 
-    // Генерація наступної послідовності
+    // Генерация новой последовательности
     function nextSequence() {
         userClickedPattern = [];
         level++;
@@ -62,13 +64,13 @@ $(document).ready(function() {
         playSound(randomChosenColor);
     }
 
-    // Відтворення звуку
+    // Воспроизведение звука
     function playSound(name) {
         let audio = new Audio("sounds/" + name + ".mp3");
         audio.play();
     }
 
-    // Анімація при натисканні
+    // Анимация при нажатии
     function animatePress(currentColor) {
         $("#" + currentColor).addClass("pressed");
         setTimeout(function() {
@@ -76,7 +78,7 @@ $(document).ready(function() {
         }, 100);
     }
 
-    // Перезапуск гри
+    // Перезапуск игры
     function startOver() {
         level = 0;
         gamePattern = [];
