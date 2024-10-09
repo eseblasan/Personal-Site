@@ -50,7 +50,7 @@ $(document).ready(function() {
         }
     }
 
-    // Генерация новой последовательности
+    
     function nextSequence() {
         userClickedPattern = [];
         level++;
@@ -64,13 +64,13 @@ $(document).ready(function() {
         playSound(randomChosenColor);
     }
 
-    // Воспроизведение звука
+    
     function playSound(name) {
         let audio = new Audio(name+ ".mp3");
         audio.play();
     }
 
-    // Анимация при нажатии
+    
     function animatePress(currentColor) {
         $("#" + currentColor).addClass("pressed");
         setTimeout(function() {
@@ -78,7 +78,7 @@ $(document).ready(function() {
         }, 100);
     }
 
-    // Перезапуск игры
+   
     function startOver() {
         level = 0;
         gamePattern = [];
